@@ -1,0 +1,46 @@
+NEXUS — versión reescrita a HTML + CSS + JS
+============================================
+
+Esta carpeta es código fuente legible, escrito a mano.
+NO usa React, NO usa TypeScript, NO necesita npm ni build.
+
+Archivos:
+  index.html  -> estructura de la página (secciones, formulario, modal).
+  styles.css  -> todos los estilos, animaciones y responsive.
+  app.js      -> datos, editor animado, demos y formulario.
+  assets\     -> logo, favicon.svg e imágenes de la demo del estudio jurídico.
+  kchick\     -> landing K-CHICK original (HTML/CSS/JS) que se abre en un iframe.
+
+CÓMO PUBLICAR
+-------------
+Subí TODO el contenido de esta carpeta a la raíz pública del hosting.
+index.html debe quedar en la raíz, con assets\ y kchick\ al lado.
+
+Sirve para Netlify Drop, Vercel, GitHub Pages, cPanel/FTP o cualquier hosting estático.
+Las rutas son relativas (./assets/..., ./kchick/...), así que también funciona en subcarpetas.
+
+DÓNDE CAMBIAR LOS DATOS
+-----------------------
+Abrí app.js y mirá el bloque CONFIG al principio:
+
+  formEndpoint: "https://formspree.io/f/mdegjyol"
+  email:        "nexusweboficial0@gmail.com"
+  whatsapp:     "5492364270958"
+  instagram:    "https://www.instagram.com/nexus__web_1/"
+
+Si querés cambiar el WhatsApp de K-CHICK, editá:
+  kchick\script.js -> WHATSAPP_PHONE = ''
+
+Los textos de servicios, planes, trabajos, opiniones, preguntas frecuentes y
+del editor están como arreglos al principio de app.js, fáciles de modificar.
+
+VERIFICACIÓN RÁPIDA
+-------------------
+1. Abrí index.html (o serví la carpeta con cualquier servidor estático).
+2. Probá el menú móvil y el formulario: abre WhatsApp y envía por Formspree.
+   El botón "Email" copia nexusweboficial0@gmail.com al portapapeles, muestra
+   un aviso y abre Gmail en una pestaña nueva, para que funcione aunque el
+   navegador no abra apps de correo con mailto:.
+3. En Trabajos reales, probá los 4 botones "VER LA PÁGINA" (El Corte,
+   Eco Limpio, Estudio Jurídico y K-CHICK).
+4. F12 -> Console sin errores y Network sin 404.

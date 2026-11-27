@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-CHICK — Korean Fast Food</title>
+<meta name="description" content="K-CHICK Korean Fast Food — crispy chicken, bold flavors, Korean soul.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- sprite de iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-flame" viewBox="0 0 24 24"><path d="M13.5 2c1.3 4-1.8 5.2-.9 8 .8 2.3 3.4 1.8 3.4 4.7 0 1.7-1.2 3-2.9 3.2.8-1.8-.2-3.2-1.7-4.2.2 2.4-2.6 3.4-2.1 6-3.5-1-5.4-3.9-4.9-7.1.4-2.4 2.2-4.4 4.5-5.5-.9 2.2-.5 3.2.6 4 .6-3.3 3.1-5.5 3.8-9.1Z" fill="currentColor" stroke="none"/></symbol>
+ <symbol id="i-crown" viewBox="0 0 24 24"><path d="M2 18 4 5l5 5 3-8 3 8 5-5 2 13H2Z" fill="currentColor" stroke="none"/><rect x="2.5" y="18" width="19" height="3" rx="1" fill="currentColor" stroke="none"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+ <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 7h16l-1.5 13h-13L4 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></symbol>
+ <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z" fill="currentColor" stroke="none"/></symbol>
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+ <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z" fill="currentColor" stroke="none"/></symbol>
+ <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C9 4 4 9 4 16c0 2 1 4 2 5M20 4c0 9-5 14-14 14"/></symbol>
+ <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 9-12h-6l1-8Z" fill="currentColor" stroke="none"/></symbol>
+ <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M17 5a3 3 0 0 1 0 6M18 14c2 0 3 2 3 5"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+ <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+ <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14"/></symbol>
+ <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+ <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+ <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+ <symbol id="i-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</svg>
+
+<!-- NAVBAR -->
+<header class="site-header">
+ <div class="container header-inner">
+  <a class="brand" href="#home" data-go="home">
+   <span class="brand-badge"><svg class="icon"><use href="#i-flame"/></svg><svg class="icon brand-crown"><use href="#i-crown"/></svg></span>
+   <span class="brand-name">K-CHICK<span>.</span></span>
+  </a>
+  <nav class="nav" id="nav">
+   <a href="#home" data-go="home">HOME</a><a href="#menu" data-go="menu">MENU</a><a href="#story" data-go="story">OUR STORY</a><a href="#locations" data-go="locations">LOCATIONS</a><a href="#why" data-go="why">FRANCHISE</a>
+  </nav>
+  <div class="header-actions">
+   <button class="round-btn" id="searchToggle" aria-label="Buscar en el menú"><svg class="icon"><use href="#i-search"/></svg></button>
+   <button class="cart-btn" id="cartToggle" aria-label="Abrir pedido"><svg class="icon"><use href="#i-bag"/></svg><span class="cart-label">PEDIDO</span><span class="cart-count" id="cartCount">0</span></button>
+   <button class="order-pill" id="orderNow">ORDER NOW</button>
+   <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+  </div>
+ </div>
+ <nav class="mobile-nav" id="mobileNav">
+  <a href="#home" data-go="home">HOME</a><a href="#menu" data-go="menu">MENU</a><a href="#story" data-go="story">OUR STORY</a><a href="#locations" data-go="locations">LOCATIONS</a><a href="#why" data-go="why">FRANCHISE</a>
+  <button class="btn btn-red" id="mobileOrder">ORDER NOW →</button>
+ </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+ <div class="hero-korean-top hand ko">더 맛있는 순간</div>
+ <div class="mood"><p>GOOD FOOD</p><p>GOOD MOOD</p></div>
+ <div class="container hero-grid">
+  <div>
+   <div class="hero-stars"><span class="hand">★ ★</span><span class="ko">한국의 맛을 한 입에!</span></div>
+   <div class="hero-title-wrap">
+    <svg class="icon crown"><use href="#i-crown"/></svg>
+    <h1 class="hero-title">K-CHICK<br><span>K-CHICK</span></h1>
+   </div>
+   <p class="hero-script hand">Korean Fast Food</p>
+   <p class="hero-tagline">CRISPY CHICKEN, BOLD FLAVORS,<br>KOREAN SOUL.</p>
+   <p class="hero-desc">Doble fritura, glaseado que pica rico y esa mesa que siempre está llena. Esto no es comida rápida: es Seúl en cada bocado.</p>
+   <div class="hero-actions">
+    <button class="btn btn-red" id="heroOrder">ORDER NOW <svg class="icon"><use href="#i-arrow"/></svg></button>
+    <button class="btn btn-outline" id="storyOpen"><span class="play-dot"><svg class="icon"><use href="#i-play"/></svg></span> WATCH OUR STORY</button>
+   </div>
+   <div class="rating"><span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span><span>4.9 · +12,000 RESEÑAS</span><span class="ko">진짜 맛있어!</span></div>
+  </div>
+  <div class="hero-visual">
+   <span class="hero-sticker hand">¡recién frito!</span>
+   <span class="hero-crunch">100% CRUJIENTE</span>
+   <div class="hero-photo"><img src="assets/hero.webp" alt="Pollo frito coreano en caja roja a cuadros"></div>
+   <span class="hero-side-ko">치킨 →</span>
+   <span class="hero-badge spin-slow">★<br>K-CHICK</span>
+  </div>
+ </div>
+ <div class="marquee-bar"><div class="marquee"><span>CRISPY ★ SPICY ★ SEOUL ★ K-CHICK ★ GOOD FOOD GOOD MOOD ★ </span><span>CRISPY ★ SPICY ★ SEOUL ★ K-CHICK ★ GOOD FOOD GOOD MOOD ★ </span></div></div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section paper-texture grunge paper-section" id="menu">
+ <div class="container">
+  <div class="section-head">
+   <div><p class="hand">맛있는 메뉴</p><h2 class="section-title">OUR <span class="script">MENU</span></h2><p class="section-note">ELIGE TU OBSESIÓN. TODO SALE CRUJIENTE Y RECIÉN HECHO.</p></div>
+   <div class="head-right"><p class="hand">오늘 뭐 먹을까?</p><button class="btn btn-dark" id="viewFullMenu">VIEW FULL MENU →</button></div>
+  </div>
+  <div class="search-bar" id="searchBar" hidden><label class="sr-only" for="menuSearch">Buscar en el menú</label><input id="menuSearch" placeholder="Busca pollo, burger, tteokbokki…" autocomplete="off"><button class="search-clear" id="searchClear">LIMPIAR</button></div>
+  <p class="result-note" id="resultNote" hidden></p>
+  <div class="menu-grid" id="menuGrid"></div>
+  <div class="no-results" id="noResults" hidden><p class="display">SIN RESULTADOS</p><p>Prueba con “pollo”, “burger” o “picante”.</p></div>
+  <p class="menu-footer hand">* Todos los platos salen calientes. El antojo no espera.</p>
+ </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+ <div class="container story-grid">
+  <div class="story-photo-wrap">
+   <div class="story-photo"><img src="assets/culture.webp" alt="Persona disfrutando pollo frito coreano"></div>
+   <div class="story-sticker hand ko">맛있는 게 제일 좋아!</div>
+   <div class="story-stamp">EST. SEOUL → EL MUNDO</div>
+  </div>
+  <div class="story-copy">
+   <p class="hand ko">우리 이야기</p>
+   <h2 class="section-title">MORE THAN<br><span>FOOD</span></h2>
+   <p class="story-text">K-CHICK is more than fast food. It's culture, it's the table, it's the city that brings people together through bold flavors and great moments.</p>
+   <p class="story-hand hand ko">좋은 음식, 좋은 사람들.</p>
+   <button class="btn btn-light" id="storyOpen2">OUR STORY →</button>
+   <div class="crew-panel">
+    <svg class="icon"><use href="#i-crown"/></svg>
+    <p class="display">GOOD FOOD<br>GOOD PEOPLE</p>
+    <div class="crew-row"><div class="crew-badge">K-CHICK<br>CREW</div><div><p class="display">LA CAMPERA QUE UNE A LA MESA</p><p>La crew, la calle y tu antojo. Misma energía, en cada ciudad.</p></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="locations">
+ <img class="locations-bg" src="assets/seoul.webp" alt="Calle de Seúl de noche con neones">
+ <div class="locations-shade"></div>
+ <div class="container locations-grid">
+  <div class="locations-copy">
+   <p class="hand ko">어디에서 만나요?</p>
+   <h2 class="section-title">LOCATIONS</h2>
+   <p class="hand script">Find us near you</p>
+   <p class="locations-text">From Seoul to your city. Experience authentic Korean flavors at all locations worldwide.</p>
+   <button class="btn btn-red" id="findLocation">FIND A LOCATION <svg class="icon"><use href="#i-pin"/></svg></button>
+  </div>
+  <aside class="cities-card">
+   <p class="cities-head"><span class="dot"></span> AHORA EN TU CIUDAD</p>
+   <ul class="cities-list"><li><span>SEOUL</span><span>01 →</span></li><li><span>NEW YORK</span><span>02 →</span></li><li><span>LOS ANGELES</span><span>03 →</span></li><li><span>LONDON</span><span>04 →</span></li></ul>
+   <p class="cities-more">AND MORE <span>★</span></p>
+   <div class="cities-visit"><div><p class="hand ko">지금 만나보세요</p><small>Ven hoy. El pollo está saliendo.</small></div><span class="smiley">☺</span></div>
+  </aside>
+ </div>
+</section>
+
+<!-- WHY -->
+<section class="why paper-texture grunge paper-section" id="why">
+ <div class="container">
+  <div class="why-head"><p class="hand ko">왜 K-CHICK?</p><h2 class="section-title">WHY <span>K-CHICK?</span></h2><p class="section-note">CUATRO RAZONES. CERO EXCUSAS PARA NO VENIR.</p></div>
+  <div class="why-grid" id="whyGrid"></div>
+  <div class="franchise"><div><p class="display">¿QUIERES TU PROPIO K-CHICK?</p><p>Franquicia, calle y sabor. Hablemos de tu ciudad.</p></div><button class="btn btn-red" id="franchiseBtn">FRANCHISE →</button></div>
+ </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+ <div class="container footer-grid">
+  <div><div class="footer-logo"><svg class="icon"><use href="#i-flame"/></svg><span>K-CHICK<span>.</span></span></div><p class="footer-hand hand">Korean Fast Food</p><p class="footer-desc">Crispy chicken, bold flavors, Korean soul. Buena comida, buena gente, buena mood.</p><p class="footer-ko hand ko">더 맛있는 순간을 함께해요</p></div>
+  <nav><p class="footer-title">EXPLORA</p><div class="footer-links"><a href="#home" data-go="home">HOME</a><a href="#menu" data-go="menu">MENU</a><a href="#story" data-go="story">OUR STORY</a><a href="#locations" data-go="locations">LOCATIONS</a><a href="#why" data-go="why">WHY K-CHICK?</a></div></nav>
+  <div><p class="footer-title">HORARIOS</p><div class="hours"><p><svg class="icon"><use href="#i-clock"/></svg> Lun – Jue · 11:00 – 23:00</p><p><svg class="icon"><use href="#i-clock"/></svg> Vie – Dom · 11:00 – 01:00</p></div><button class="btn btn-red" id="footerOrder">ORDER NOW →</button></div>
+ </div>
+ <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2026 K-CHICK. Todos los derechos reservados.</span><span>GOOD FOOD · GOOD MOOD · SEOUL ★</span></div></div>
+</footer>
+
+<!-- MODAL DETALLE -->
+<div class="overlay" id="dishModal" role="dialog" aria-modal="true" hidden>
+ <div class="overlay-center"><div class="modal-card">
+  <button class="modal-close" data-close-dish aria-label="Cerrar detalle"><svg class="icon"><use href="#i-x"/></svg></button>
+  <div class="modal-hero"><img id="dishImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt=""><span class="modal-tag" id="dishTag"></span></div>
+  <div class="modal-body">
+   <div class="modal-heading"><div><h3 id="dishName"></h3><p class="hand" id="dishKo"></p></div><p class="price" id="dishPrice"></p></div>
+   <p class="modal-desc" id="dishDesc"></p>
+   <div class="chips"><span>RECIÉN HECHO</span><span>DOBLE FRITURA</span><span>SALSA DE LA CASA</span></div>
+   <div class="modal-actions"><button class="btn btn-red" id="dishAdd">ADD TO ORDER</button><button class="btn btn-outline" data-close-dish>SEGUIR VIENDO</button></div>
+  </div>
+ </div></div>
+</div>
+
+<!-- MODAL HISTORIA -->
+<div class="overlay" id="storyModal" role="dialog" aria-modal="true" hidden>
+ <div class="overlay-center"><div class="story-modal">
+  <button class="modal-close" data-close-story aria-label="Cerrar historia"><svg class="icon"><use href="#i-x"/></svg></button>
+  <p class="hand ko" style="color:var(--red);font-size:30px">우리 이야기</p>
+  <h3>NUESTRA HISTORIA<br><span>EMPEZÓ EN LA CALLE</span></h3>
+  <p>Un puesto, una freidora y una fila que no se acababa. Hoy K-CHICK es esa misma mesa: ruidosa, generosa y con el pollo en el centro. La receta no cambió: crujiente por fuera, jugoso por dentro y sabor que se queda.</p>
+  <div class="stats"><div><p class="display">2018</p><small>PRIMER LOCAL</small></div><div><p class="display">4</p><small>CIUDADES</small></div><div><p class="display">100%</p><small>CRUJIENTE</small></div></div>
+  <button class="btn btn-red" id="storyToMenu">PROBAR EL MENÚ →</button>
+ </div></div>
+</div>
+
+<!-- MODAL CARRITO -->
+<div class="overlay" id="cartModal" role="dialog" aria-modal="true" hidden>
+ <div class="overlay-center"><div class="cart-modal">
+  <div class="cart-head"><div><h3>TU PEDIDO</h3><p class="hand">맛있게 먹어요!</p><small id="cartStatus">Pedido guardado</small></div><button class="cart-close" data-close-cart aria-label="Cerrar pedido"><svg class="icon"><use href="#i-x"/></svg></button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-msg" id="orderMsg" hidden><svg class="icon"><use href="#i-check"/></svg><span id="orderMsgText"></span></div>
+  <a class="wa-link" id="waLink" href="#" target="_blank" rel="noopener" hidden>💬 ABRIR WHATSAPP →</a>
+  <div class="cart-foot"><div class="cart-total-row"><span>TOTAL</span><span id="cartTotal">$0.00</span></div><small id="cartSub">0 productos · Recogida en tienda · 15–20 min</small><button class="checkout" id="checkout" disabled>CHECKOUT → ENVIAR POR WHATSAPP</button></div>
+ </div></div>
+</div>
+
+<div class="toast" id="toast" hidden><svg class="icon"><use href="#i-check"/></svg><span id="toastText"></span></div>
+<button class="mobile-cart" id="mobileCart">VER PEDIDO <span id="mobileCartCount">0</span></button>
+
+<script src="script.js"></script>
+</body>
+</html>

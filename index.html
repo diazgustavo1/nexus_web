@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05070d">
+  <meta name="description" content="NEXUS — Páginas web y landing pages rápidas, modernas y pensadas para vender.">
+  <title>NEXUS — Páginas que venden</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" type="image/jpeg" href="assets/logo-nexus.jpg">
+  <link rel="apple-touch-icon" href="assets/logo-nexus.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Iconos reutilizables: WhatsApp e Instagram -->
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849s-.011 3.584-.069 4.849c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.849-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849s.012-3.584.07-4.849c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.073-4.948c-.197-4.349-2.622-6.779-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+  </symbol>
+</svg>
+
+<div class="safe-root">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="NEXUS, ir al inicio">
+        <img src="assets/logo-nexus.jpg" alt="NEXUS — Páginas que venden">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#inicio" data-nav>Inicio</a>
+        <a href="#servicios" data-nav>Servicios</a>
+        <a href="#trabajos" data-nav>Trabajos</a>
+        <a href="#proceso" data-nav>Proceso</a>
+        <a href="#opiniones" data-nav>Opiniones</a>
+        <a href="#contacto" data-nav>Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" id="headerInstagram" href="https://www.instagram.com/nexus__web_1/" target="_blank" rel="noopener" aria-label="Instagram de NEXUS"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        <button class="btn grad-btn header-cta" data-contacto>Quiero mi página <span>→</span></button>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuMovil">☰</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="menuMovil" hidden aria-label="Navegación móvil">
+      <a href="#inicio" data-nav>Inicio</a>
+      <a href="#servicios" data-nav>Servicios</a>
+      <a href="#trabajos" data-nav>Trabajos</a>
+      <a href="#proceso" data-nav>Proceso</a>
+      <a href="#opiniones" data-nav>Opiniones</a>
+      <a href="#contacto" data-nav>Contacto</a>
+      <a id="menuInstagram" href="https://www.instagram.com/nexus__web_1/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Instagram</a>
+      <button class="btn grad-btn" data-contacto>Quiero mi página</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="hero">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="glow-blue" aria-hidden="true"></div>
+      <div class="glow-violet" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow badge">✦ PÁGINAS QUE VENDEN</span>
+          <a class="work-link" href="https://residencia-junin-ok.netlify.app/" target="_blank" rel="noopener">
+            Trabajo real: Residencia Junín | Un Hogar Familiar — Ver página real ↗
+          </a>
+          <h1>Tu negocio merece<br>una página <span class="grad-text">que venda.</span></h1>
+          <p class="lead">Diseño páginas web y landing pages rápidas, modernas y pensadas para convertir visitas en clientes.</p>
+          <div class="hero-actions">
+            <a class="btn grad-btn" href="#trabajos">Ver trabajos ↓</a>
+            <button class="btn ghost-btn" data-contacto>Pedir mi página →</button>
+          </div>
+          <div class="chip-row">
+            <span class="chip">⚡ Entregas rápidas</span>
+            <span class="chip">▣ 100% Responsive</span>
+            <span class="chip">✎ Diseño a medida</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-glow" aria-hidden="true"></div>
+          <div class="hero-card float">
+            <div class="hero-card-top"><span>NEXUS</span><span class="open-badge">● Agenda abierta</span></div>
+            <img class="glow hero-logo" src="assets/logo-nexus.jpg" alt="Logo NEXUS — Páginas que venden">
+            <div class="hero-mini-grid">
+              <div><b>Rápida</b><small>Carga veloz</small></div>
+              <div><b>Moderna</b><small>Diseño actual</small></div>
+              <div><b>Que vende</b><small>Pensada para convertir</small></div>
+            </div>
+            <button class="btn grad-btn full" data-ejemplo="la demo de NEXUS">Quiero una página así →</button>
+          </div>
+          <div class="floating-note">
+            <span class="note-icon">♥</span>
+            <div><b>Clientes felices</b><small>Páginas que se sienten propias</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee">
+          <span>LANDING PAGES ✦ PÁGINAS WEB ✦ TIENDAS ONLINE ✦ PORTFOLIOS ✦ TURNOS Y RESERVAS ✦ REDISEÑO ✦&nbsp;</span>
+          <span>LANDING PAGES ✦ PÁGINAS WEB ✦ TIENDAS ONLINE ✦ PORTFOLIOS ✦ TURNOS Y RESERVAS ✦ REDISEÑO ✦&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ POR QUÉ ============ -->
+    <section class="section container">
+      <div class="reveal why-head">
+        <div>
+          <p class="eyebrow">¿POR QUÉ NEXUS?</p>
+          <h2>No es solo una página linda.<br><span class="grad-text">Es tu mejor vendedora.</span></h2>
+        </div>
+        <p class="muted">Tu página tiene que trabajar por vos todos los días: mostrar lo mejor de tu negocio, generar confianza y hacer que la gente te escriba. Por eso cada detalle — diseño, textos y botones — está pensado para vender, no solo para verse bien.</p>
+      </div>
+      <div class="grid-4" id="whyGrid"></div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section id="servicios" class="section section-alt">
+      <div class="container">
+        <div class="reveal section-head">
+          <div>
+            <p class="eyebrow">SERVICIOS</p>
+            <h2>Elegí la página que<br>necesita tu negocio</h2>
+          </div>
+          <p class="muted">Sin vueltas ni tecnicismos. Contame qué hacés y te propongo la opción que más te conviene.</p>
+        </div>
+        <div class="grid-3" id="serviciosGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ EDITOR ============ -->
+    <section id="construyo" class="section container">
+      <div class="reveal">
+        <p class="eyebrow">ASÍ CONSTRUYO TU PÁGINA</p>
+        <h2>Mirá cómo se escribe <span class="grad-text">tu página, línea por línea</span></h2>
+      </div>
+      <div class="editor-layout">
+        <div class="reveal editor-copy">
+          <p class="muted">Tu página no sale de un botón ni de una plantilla copiada. La escribo yo, a mano, pensando en tu negocio: en cómo se ve, en qué dice y en qué tiene que hacer quien la visita.</p>
+          <p class="muted">En este editor podés ver, en vivo, cómo empieza todo: primero la estructura, después el diseño y por último la interacción. Así, sin misterio.</p>
+          <ul class="check-list">
+            <li><span>✓</span><div><b>Código limpio y ordenado</b><small>Cada parte en su lugar, fácil de mantener y de hacer crecer.</small></div></li>
+            <li><span>✓</span><div><b>Sin plantillas genéricas</b><small>Tu página se escribe para tu negocio, con tu estilo y tu forma de trabajar.</small></div></li>
+            <li><span>✓</span><div><b>Pensado para vender y cargar rápido</b><small>Textos claros, un botón que se ve y una página liviana que no hace esperar.</small></div></li>
+          </ul>
+          <button class="btn grad-btn" data-contacto>Quiero mi página →</button>
+          <p class="hint">Cambiá de pestaña, pausá la escritura con el mouse y volvé a verla cuantas veces quieras.</p>
+        </div>
+        <div class="reveal" id="codeEditor"></div>
+      </div>
+    </section>
+
+    <!-- ============ TRABAJOS ============ -->
+    <section id="trabajos" class="section container">
+      <div class="reveal center">
+        <p class="eyebrow">TRABAJOS REALES</p>
+        <h2>Trabajos reales</h2>
+        <p class="muted">Páginas que ya venden por sus dueños</p>
+      </div>
+      <div class="works-grid" id="trabajosGrid"></div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section id="proceso" class="section section-gradient">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow">EL PROCESO</p>
+          <h2>Simple, claro y sin estrés. <span class="grad-text">En 4 pasos.</span></h2>
+        </div>
+        <div class="grid-4" id="procesoGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ OPINIONES ============ -->
+    <section id="opiniones" class="section container">
+      <div class="reveal">
+        <p class="eyebrow">OPINIONES</p>
+        <h2>Clientes que ya tienen<br>su página NEXUS</h2>
+      </div>
+      <div class="grid-3" id="opinionesGrid"></div>
+    </section>
+
+    <!-- ============ PLANES ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="reveal center">
+          <p class="eyebrow">PLANES / CÓMO EMPEZAR</p>
+          <h2>Empezá hoy, <span class="grad-text">sin complicaciones</span></h2>
+          <p class="muted">Elegí el plan que mejor va con tu momento. El precio final se define según tu proyecto.</p>
+        </div>
+        <div class="grid-3 planes" id="planesGrid"></div>
+        <p class="reveal plan-notes">
+          <span>◈ Sin letra chica</span><span>◷ Entrega ágil</span><span>⌕ Pensada para Google y redes</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section id="contacto" class="section contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="eyebrow">CONTACTO</p>
+          <h2>¿Tenés un proyecto en mente? <span class="grad-text">Hagamos que venda.</span></h2>
+          <p class="muted">Contame sobre tu negocio y te respondo con una propuesta clara: qué página te conviene, cómo sería y cuándo podría estar lista.</p>
+
+          <div class="contact-points">
+            <div><span class="point-icon">✎</span><div><b>Contame tu idea</b><small>Sin compromiso. Solo charlamos de lo que necesitás.</small></div></div>
+            <div><span class="point-icon">◉</span><div><b>Respuesta pensada para vos</b><small>Te propongo la mejor opción para tu negocio y tu presupuesto.</small></div></div>
+            <div><span class="point-icon">◷</span><div><b>Proceso ágil</b><small>Diseño, ajustes y publicación sin vueltas.</small></div></div>
+          </div>
+
+          <p id="contador" class="counter" hidden></p>
+
+          <div class="social-row">
+            <a class="btn outline" id="contactoWhatsapp" href="https://wa.me/5492364270958" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg> WhatsApp</a>
+            <a class="btn outline" id="contactoInstagram" href="https://www.instagram.com/nexus__web_1/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Instagram</a>
+            <a class="btn outline" id="contactoEmail" href="mailto:nexusweboficial0@gmail.com" title="Copiar el email y abrir Gmail"><span class="email-label">Email</span></a>
+          </div>
+          <p class="email-display" id="emailDisplay">nexusweboficial0@gmail.com</p>
+        </div>
+
+        <div class="reveal">
+          <div class="form-box">
+            <div id="formWrap">
+              <h3>Contame sobre tu proyecto</h3>
+              <p class="muted small">Completá el formulario y empecemos.</p>
+              <div id="planElegido" class="plan-selected" hidden></div>
+
+              <form id="leadForm" novalidate>
+                <label><span>Nombre *</span><input id="fNombre" name="nombre" required placeholder="¿Cómo te llamás?"></label>
+                <label><span>Tu email *</span><input id="fEmail" name="email" type="email" required placeholder="para responderte con el presupuesto"></label>
+                <label><span>Tipo de negocio *</span><input id="fTipo" name="tipo" required placeholder="Ej: peluquería, tienda, estudio, emprendimiento…"></label>
+                <label><span>Qué necesitás</span>
+                  <select id="fNecesidad" name="necesidad">
+                    <option>Landing Page que vende</option>
+                    <option>Página Web para Negocios</option>
+                    <option>Tienda Online / Catálogo</option>
+                    <option>Portfolio / Marca Personal</option>
+                    <option>Página para Turnos y Reservas</option>
+                    <option>Rediseño de página existente</option>
+                    <option>Web Completa</option>
+                    <option>Web + Tienda</option>
+                    <option>Todavía no lo sé, quiero que me asesores</option>
+                  </select>
+                </label>
+                <label><span>Mensaje *</span><textarea id="fMensaje" name="mensaje" rows="4" required placeholder="Contame qué hacés, qué querés lograr con tu página y si ya tenés logo o fotos…"></textarea></label>
+                <p id="formError" class="form-error" role="alert" hidden></p>
+                <button class="btn grad-btn full" id="submitBtn" type="submit">Quiero mi página ↗</button>
+                <p class="hint center">Al enviar, abrimos WhatsApp y tu solicitud llega por email (o queda lista en tu app de correo).</p>
+              </form>
+            </div>
+
+            <div id="formSuccess" role="status" hidden>
+              <div class="success-icon">✓</div>
+              <h3 id="successTitle">¡Listo!</h3>
+              <p id="successText" class="muted"></p>
+              <button class="btn ghost-btn" id="otraSolicitud">Enviar otra solicitud</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-nexus.jpg" alt="NEXUS — Páginas que venden" class="footer-logo">
+        <p class="muted">Páginas que venden. Diseño, velocidad y estrategia para que tu negocio crezca en internet.</p>
+        <div class="footer-social">
+          <a id="footerWhatsapp" href="https://wa.me/5492364270958" target="_blank" rel="noopener" aria-label="WhatsApp de NEXUS"><svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg></a>
+          <a id="footerInstagram" href="https://www.instagram.com/nexus__web_1/" target="_blank" rel="noopener" aria-label="Instagram de NEXUS"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+          <a id="footerEmail" href="mailto:nexusweboficial0@gmail.com" aria-label="Email de NEXUS">Email</a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Enlaces del footer">
+        <a href="#inicio" data-nav>Inicio</a>
+        <a href="#servicios" data-nav>Servicios</a>
+        <a href="#trabajos" data-nav>Trabajos</a>
+        <a href="#proceso" data-nav>Proceso</a>
+        <a href="#opiniones" data-nav>Opiniones</a>
+        <a href="#contacto" data-nav>Contacto</a>
+      </nav>
+      <button class="btn grad-btn footer-cta" data-contacto>Quiero mi página ↗</button>
+    </div>
+    <p class="footer-bottom">© <span id="anio"></span> NEXUS — Páginas que venden. Hecho con estrategia y diseño.</p>
+  </footer>
+</div>
+
+<!-- ============ MODAL DEMOS ============ -->
+<div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalUrl" hidden>
+  <div class="modal-window">
+    <div class="modal-bar">
+      <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="modal-url" id="modalUrl">nexus.demo</span>
+      <button class="modal-close" id="modalClose" type="button">Cerrar ✕</button>
+    </div>
+    <div id="demoContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
